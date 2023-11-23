@@ -1,3 +1,4 @@
+// Superclass / Parentclass
 public abstract class Shapes {
     private String color;
     boolean isFilled;

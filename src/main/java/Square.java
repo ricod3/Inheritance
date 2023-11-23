@@ -17,7 +17,7 @@ public class Square extends Rectangle {
     }
 
     @Override
-    public String getType() {
+    public String getShape() {
         return "Square";
     }
 }

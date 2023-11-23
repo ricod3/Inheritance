@@ -24,7 +24,7 @@ public class Circle extends Shapes {
     }
 
     @Override
-    public String getType() {
+    public String getShape() {
         return "Circle";
     }
 }

@@ -29,7 +29,7 @@ public class Rectangle extends Shapes {
     }
 
     @Override
-    public String getType() {
+    public String getShape() {
         return "Rectangle";
     }
 }

@@ -2,8 +2,12 @@
 public class Circle extends Shapes{
     private double radius;
 
-    public Circle(String color, boolean isFilled) {
+    // constructor matching super
+    public Circle(double radius, String color, boolean isFilled) {
         super(color, isFilled);
+        this.radius = radius;
+        this.setColor(color);
+        this.setFilled(isFilled);
     }
 
     @Override

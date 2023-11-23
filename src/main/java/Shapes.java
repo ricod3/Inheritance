@@ -8,9 +8,7 @@ public abstract class Shapes {
         this.isFilled = isFilled;
     }
 
-    public String getColor() {
-        return color;
-    }
+    public String getColor() {return color;}
 
     public void setColor(String color) {
         this.color = color;

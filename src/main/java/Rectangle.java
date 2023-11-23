@@ -32,4 +32,8 @@ public class Rectangle extends Shapes {
     public String getShape() {
         return "Rectangle";
     }
+
+    public double getLength() {
+        return length;
+    }
 }

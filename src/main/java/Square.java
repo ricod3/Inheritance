@@ -4,16 +4,19 @@ public class Square extends Rectangle {
     // constructor matching super
     public Square(double length, String color, boolean isFilled) {
         super(length, length, color, isFilled);
+        if (length <= 0) {
+            throw new IllegalArgumentException("Length is negative!");
+        }
     }
 
     @Override
     public double getArea() {
-        return 0;
+        return getLength() * getLength();
     }
 
     @Override
     public double getPerimeter() {
-        return 0;
+        return getLength() * 4;
     }
 
     @Override

@@ -17,7 +17,6 @@ public class Rectangle extends Shapes {
         this.setFilled(isFilled);
     }
 
-
     @Override
     public double getArea() {
         return length * width;

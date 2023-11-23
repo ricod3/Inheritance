@@ -3,12 +3,14 @@ public abstract class Shapes {
     private String color;
     boolean isFilled;
 
-    public Shapes (String color, boolean isFilled) {
+    public Shapes(String color, boolean isFilled) {
         this.color = color;
         this.isFilled = isFilled;
     }
 
-    public String getColor() {return color;}
+    public String getColor() {
+        return color;
+    }
 
     public void setColor(String color) {
         this.color = color;
@@ -23,6 +25,7 @@ public abstract class Shapes {
     }
 
     public abstract double getArea();
+
     public abstract double getPerimeter();
 
     public abstract String getShape();

@@ -1,5 +1,5 @@
 // Subclass / Childclass of Rectangle
-public class Square extends Rectangle{
+public class Square extends Rectangle {
 
     // constructor matching super
     public Square(double length, String color, boolean isFilled) {
@@ -14,5 +14,10 @@ public class Square extends Rectangle{
     @Override
     public double getPerimeter() {
         return 0;
+    }
+
+    @Override
+    public String getType() {
+        return "Square";
     }
 }

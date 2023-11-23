@@ -8,6 +8,9 @@ public class Rectangle extends Shapes {
     // constructor matching super
     public Rectangle(double length, double width, String color, boolean isFilled) {
         super(color, isFilled);
+        if (length <= 0 || width <= 0) {
+            throw new IllegalArgumentException("Length or width is negative!");
+        }
         this.length = length;
         this.width = width;
         this.setColor(color);
@@ -23,5 +26,10 @@ public class Rectangle extends Shapes {
     @Override
     public double getPerimeter() {
         return 2 * length + 2 * width;
+    }
+
+    @Override
+    public String getType() {
+        return "Rectangle";
     }
 }

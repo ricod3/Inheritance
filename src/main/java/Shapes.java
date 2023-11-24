@@ -30,12 +30,15 @@ public abstract class Shapes {
 
     public abstract String getShape();
 
-    public void output() {
-        System.out.printf(">>> " + getShape() + " <<<");
-        System.out.printf("\n%5s%.2f", "Area: ", this.getArea());
-        System.out.printf("\n%5s%.2f", "Perimeter: ", this.getPerimeter());
-        System.out.printf("\n%5s%s", "Color: ", this.getColor());
-        System.out.printf("\n%5s%s\n", "Filled: ", this.isFilled());
-        System.out.println("================");
+    public String toString() {
+        StringBuilder sB = new StringBuilder();
+        sB.append(">>> ").append(getShape()).append(" <<<\n");
+        sB.append(print());
+        sB.append("==================");
+        return sB.toString();
+    }
+
+    public String print() {
+        return String.format("%5s%.2f\n%5s%.2f\n%5s%s\n%5s%s\n", "Area: ", this.getArea(), "Perimeter: ", this.getPerimeter(), "Color: ", this.getColor(), "Fillled: ", this.isFilled());
     }
 }

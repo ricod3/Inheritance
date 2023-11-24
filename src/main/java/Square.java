@@ -9,16 +9,7 @@ public class Square extends Rectangle {
         }
     }
 
-    @Override
-    public double getArea() {
-        return getLength() * getLength();
-    }
-
-    @Override
-    public double getPerimeter() {
-        return getLength() * 4;
-    }
-
+    // without Override getPerimeter and getArea - already defined in rectangle-
     @Override
     public String getShape() {
         return "Square";

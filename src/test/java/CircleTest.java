@@ -7,13 +7,16 @@ class CircleTest {
     private final Circle testCircle = new Circle(10, "purple", false);
 
     @Test
-    void testException() {
+    void testExceptionWhereRadiusIsNull() {
         IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () -> {
             Circle testCircle = new Circle(0, "purle", true);
         });
         System.out.println(ex);
         assertEquals(ex.getMessage(), "Radius is negative!");
+    }
 
+    @Test
+    void testExceptionWhereRadiusIsNegative() {
         IllegalArgumentException exc = assertThrows(IllegalArgumentException.class, () -> {
             Circle testCircle = new Circle(-1, "purle", true);
         });

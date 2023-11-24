@@ -11,25 +11,28 @@ class RectangleTest {
     }
 
     @Test
-    void testGetPerimeter() {
-        assertEquals(2 * 10 + 2 * 5, testRectangle.getPerimeter());
-    }
-
-    // Testing IllegalArgumentException twice (with 0 and - 1 value)
-    @Test
-    void testException() {
+    void testExceptionWhereWidthIsNull() {
         IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () -> {
             Rectangle testRectangle = new Rectangle(5, 0, "purle", true);
         });
         System.out.println(ex);
         assertEquals(ex.getMessage(), "Length or width is negative!");
+    }
 
+    @Test
+    void testExceptionWhereLenghtIsNegative() {
         IllegalArgumentException exc = assertThrows(IllegalArgumentException.class, () -> {
             Rectangle testRectangle = new Rectangle(-1, 5, "purle", true);
         });
         System.out.println(exc);
         assertEquals(exc.getMessage(), "Length or width is negative!");
     }
+
+    @Test
+    void testGetPerimeter() {
+        assertEquals(2 * 10 + 2 * 5, testRectangle.getPerimeter());
+    }
+    // Testing IllegalArgumentException twice (with 0 and - 1 value)
 
     @Test
     void testGetShape() {

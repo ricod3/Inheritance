@@ -33,12 +33,13 @@ public abstract class Shapes {
     public String toString() {
         StringBuilder sB = new StringBuilder();
         sB.append(">>> ").append(getShape()).append(" <<<\n");
-        sB.append(print());
+        sB.append(String.format(
+                "%5s%.2f\n%5s%.2f\n%5s%s\n%5s%s\n",
+                "Area: ", this.getArea(),
+                "Perimeter: ", this.getPerimeter(),
+                "Color: ", this.getColor(),
+                "Filled: ", this.isFilled()));
         sB.append("==================");
         return sB.toString();
-    }
-
-    public String print() {
-        return String.format("%5s%.2f\n%5s%.2f\n%5s%s\n%5s%s\n", "Area: ", this.getArea(), "Perimeter: ", this.getPerimeter(), "Color: ", this.getColor(), "Fillled: ", this.isFilled());
     }
 }

@@ -1,5 +1,5 @@
 # Inheritance
-Java-Maven program for Coders.Bay module "Inheritance"
+**Java-Maven program for Coders.Bay module "Inheritance"**
 
 Vererbung
 Aufgabe: Shapes
